@@ -35,47 +35,9 @@ fetch("data.json")
 
      
 
-
-
   }
+  const load=document.querySelector(".button-load-more")
 
-  const toggles=document.querySelector(".head-outter");
-     const li_1=document.querySelectorAll("li");
-     const changeH2=document.querySelectorAll(".work-des");
-
-     toggles.addEventListener("click",function(){
-      toggles.classList.toggle("active");
-      changeH2Color();
-      liall();
-
-     })
-
-      //looping through all fieldset  to apply dark background effect
-      function liall(){
-        for(let a of li_1){
-          a.classList.toggle("active");
-        }
-      }
-
-            //looping through all H2 to apply dark background effect
-      function changeH2Color(){
-        for(let b of changeH2){
-          b.classList.toggle("active")
-        }
-      }
-
-})
-.catch(error=>console.log(error))
-
-
-
-
-
-//------------------------------------------load button--------------------------
-const load=document.querySelector(".button-load-more")
-fetch("./data.json")
-.then(respond=>respond.json())
-.then(data=>{
   load.addEventListener("click",()=>{
     for(let i=0;i<data.length;i++){
       //creating an li to contain the items
@@ -104,46 +66,93 @@ fetch("./data.json")
       `
        
         myUl.append(myLi)
+        
        
         
     
     }
       load.style.display="none"
-
-  
-   
+    
   }
-  const toggle1=document.querySelector(".head-outter");
+})
+
+
+
+
+const toggles=document.querySelector(".head-outter");
   const li_2=document.querySelectorAll("li");
-  const changeH2=document.querySelectorAll(".work-des");
+   const changeH2=document.querySelectorAll(".work-des");
+const darkMode=()=>{
+   toggles.addEventListener("click",function(){
+   toggles.classList.toggle("active");
+    changeH2Color();
+    liall();
 
-  toggle1.addEventListener("click",function(){
-   toggle1.classList.toggle("active");
-   changeH2Color();
-   liall();
-
-  })
+   })
 
    //looping through all fieldset  to apply dark background effect
-   function liall(){
-     for(let a of li_2){
-       a.classList.toggle("active");
-     }
-   }
+    function liall(){
+      for(let a of li_2){
+        a.classList.toggle("active");
+      }
+    }
 
-         //looping through all H2 to apply dark background effect
-   function changeH2Color(){
-     for(let b of changeH2){
+          //looping through all H2 to apply dark background effect
+    function changeH2Color(){
+      for(let b of changeH2){
        b.classList.toggle("active")
-     }
-   }
+      }
+    }
+  }
+       darkMode()
+    }
+)
+.catch(error=>console.log(error))
+
+
+
+
+
+//------------------------------------------load button--------------------------
+
+// fetch("./data.json")
+// .then(respond=>respond.json())
+// .then(data=>{
+  
+  
+   
+//   }
+//   const toggle1=document.querySelector(".head-outter");
+//   const li_2=document.querySelectorAll("li");
+//   const changeH2=document.querySelectorAll(".work-des");
+
+//   toggle1.addEventListener("click",function(){
+//    toggle1.classList.toggle("active");
+//    changeH2Color();
+//    liall();
+
+//   })
+
+   //looping through all fieldset  to apply dark background effect
+//    function liall(){
+//      for(let a of li_2){
+//        a.classList.toggle("active");
+//      }
+//    }
+
+//          //looping through all H2 to apply dark background effect
+//    function changeH2Color(){
+//      for(let b of changeH2){
+//        b.classList.toggle("active")
+//      }
+//    }
   
 
 
-  })
+//   })
 
-})
-.catch(error=>console.log(error))
+// })
+// .catch(error=>console.log(error))
 
 
 
