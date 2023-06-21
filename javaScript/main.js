@@ -115,44 +115,7 @@ const darkMode=()=>{
 
 //------------------------------------------load button--------------------------
 
-// fetch("./data.json")
-// .then(respond=>respond.json())
-// .then(data=>{
-  
-  
-   
-//   }
-//   const toggle1=document.querySelector(".head-outter");
-//   const li_2=document.querySelectorAll("li");
-//   const changeH2=document.querySelectorAll(".work-des");
 
-//   toggle1.addEventListener("click",function(){
-//    toggle1.classList.toggle("active");
-//    changeH2Color();
-//    liall();
-
-//   })
-
-   //looping through all fieldset  to apply dark background effect
-//    function liall(){
-//      for(let a of li_2){
-//        a.classList.toggle("active");
-//      }
-//    }
-
-//          //looping through all H2 to apply dark background effect
-//    function changeH2Color(){
-//      for(let b of changeH2){
-//        b.classList.toggle("active")
-//      }
-//    }
-  
-
-
-//   })
-
-// })
-// .catch(error=>console.log(error))
 
 
 

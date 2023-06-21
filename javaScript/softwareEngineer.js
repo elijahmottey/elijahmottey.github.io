@@ -36,7 +36,7 @@ fetch("./data.json")
            <div class="inner-container-2">
               <div class="container-2-1">
                  <h2>Blogr</h2>
-                 <a class="color" href="#">${data[i].company}</a>
+                 <a class="color" href="apply.html">${data[i].company}</a>
               </div>
            
                <a href="./index.html" target="_blank"><button class="button " id="b-expand">Company Site</button> </a>
@@ -64,7 +64,7 @@ fetch("./data.json")
       
                   </div>
                   <div class="apply">
-                      <button class="button apply-1">Apply Now</button>
+                    <a href="apply.html" target="_blank" class="button apply-1">  <button >Apply Now</button></a>
                   </div>
       
               </div><br>

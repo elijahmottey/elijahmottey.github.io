@@ -33,10 +33,10 @@ apply for the job
 
 ## Usage
 
-1. Hit on the link to open the developer web application
+1. Hit on the link[https://elijahmottey.github.io] to open the developer web application
 2. Search your job type and click on the job title 
 to visit the next page. you can hit the load more to pull every thing from the [data.json]
-3. Read on your job requirement and once satisfied with the requirement you can apply for the job.
+3. Read on your job requirement and once satisfied with the requirements you can apply for the job.
 4. You can click on the company site button and go back
 to the index page
 5. Repeat the process all over again
