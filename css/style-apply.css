@@ -1,0 +1,263 @@
+
+@import url("https://fonts.google.com/specimen/Kumbh+Sans?query=Kumbh+Sans");
+/* universal */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    padding:0;
+    
+    
+}
+body{
+    background-color: var(--lightgray);
+}
+
+
+:root{
+    --voilet:#5964E0;
+    --white:rgba(255,255,255);
+    --lightgray:rgb(244,246,248);
+    --lightVoilet:rgb(147,155,244);
+    --veryDarkBlue:#19202D;
+    --midnight:rgb(18,23,33);
+    --gray:rgb(157,174,194);
+    --darkGray:rgb(110,128,152);
+}
+
+
+.background{
+    background-image: url("/assets/desktop/bg-pattern-header.svg");
+    border-radius: 0px 0px 0px 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    height: 100px;
+}
+.head-background-content{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.image-size{
+    width:20px;
+    height: 20px;
+}
+.head-search-content{
+    position: relative;
+    top:0;
+    width:80vw;
+    height:60px;
+    background-color: white;
+    border-radius: 10px;
+    display:flex;
+    justify-content:space-evenly;
+    margin: 0 auto;
+    margin-top:-10px;
+    cursor: pointer;
+   
+}
+ .head-content {
+   margin-top: 20px;
+   margin-left: 5%;
+} 
+.head-images{
+    display: flex;
+    margin-top: 18px;
+    margin-right:5% ;
+    cursor: pointer;  
+    
+}
+.head-outter{
+    position:relative;
+    top:0;
+    right:0;
+    width:40px;
+    height: 20px;
+    border-radius: 60px;
+    background-color: var(--white);
+    margin: 0 10px;
+}
+.head-inner{
+     position:absolute; 
+    top:0;
+    left: 0; 
+    width:12px;
+    height: 12px;
+    border-radius:50%;
+    background-color:var(--voilet) ;
+    margin-top: 4.4px;
+    margin-left: 5px;
+    
+}
+.head-outter:hover .head-inner{
+    background-color: var(--lightVoilet);
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.button{
+    width:100px;
+    height: 36px;
+    color: var(--white);
+    background-color: var(--voilet);
+    cursor: pointer;
+    border:none;
+    outline:none;
+    border-radius: 7px;
+    color: var(--white);
+   
+    
+}
+.button:hover{
+    background-color:var(--lightVoilet) ;
+}
+.outter-container{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    margin:0 auto;
+    width: 70%;
+    background-color:var(--white) ;
+    height: 4em;
+    margin-top: -32px;
+    border-radius: 30px;
+    font-size:1.0em;
+}
+
+
+
+
+
+/* main */
+main{
+    margin:auto;
+}
+
+.b-image{
+    background-image:url("/assets/apply/apply-image.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    height:50vh;
+    width:100vw;
+    margin:0 auto;
+    aspect-ratio: 31/14;
+    
+}
+
+.text{
+    width:100%;
+    height: 2em;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    border-radius: 5px;
+    margin:3em auto;
+   
+}
+
+form{
+    margin:4em auto;
+    padding:2rem;
+    width:50%;
+    height: 100%;
+    margin-top: 0;
+    background-color: var(--white);
+    display: block;
+    margin-bottom: 3em;
+
+
+}
+
+
+/* -------------------------------TABLET MODE------------------------------- */
+
+
+
+
+@media (max-width: 1023px) {
+    /* Add tablet-specific CSS styles here */
+
+
+
+
+form{
+    
+    width:90%;
+    
+
+
+}
+
+.outter-container{
+   
+    width: 90%;
+   
+}
+
+}
+
+/* ------------------------MOBILE VIEW------------------------------------------------------------------- */
+
+  
+  
+  /* Mobile phone styles */
+  @media (max-width: 767px) {
+    /* Add mobile phone-specific CSS styles here */
+
+
+    .background{
+        background-image: url("/assets/mobile/bg-pattern-header.svg");
+        border-radius: 0px 0px 0px 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+    }
+
+    .outter-container{
+        display:block;
+       
+        text-align: center;
+        height: 10em;
+        
+        border-radius: 10px;
+        padding: 2rem;
+        position:relative;
+    }
+    .job{
+        opacity:100%;
+        font-size: 1.5rem;
+      
+
+    }
+    .back{
+        margin-top: 2.4em;
+        position: absolute;
+        top:11em;
+        left:center;
+    }
+
+
+}
+
+
+/* for javascript */
+
+.head-outter.active .head-inner{
+    left: 1.0rem;
+    transition:0.5s;
+ }
+ body.active {
+    background-color: var(--midnight);
+ }
+ form.active,.outter-container.active{
+    background-color: var(--veryDarkBlue);
+    color:var(--white)
+ }
+ .text.active{
+    border:none;
+    outline:none;
+ }

@@ -3,7 +3,7 @@ const header=document.querySelector("header");
 const main=document.querySelector("main");
 const footer1=document.querySelector("footer")
 
-fetch("./data.json")
+fetch("../data.json")
 .then(respond=>respond.json())
 .then(data=>{
   for(let i=0;i<data.length;i++){
@@ -20,9 +20,9 @@ fetch("./data.json")
                <img src="./assets/desktop/logo.svg" alt="">
            </div >
            <div class="head-images">
-          <img class="image-size" src="./assets/desktop/icon-sun.svg" alt="">
+          <img class="image-size" src="/assets/desktop/icon-sun.svg" alt="">
           <div class="head-outter"><div class="head-inner"></div></div>
-          <img class="image-size" src="./assets/desktop/icon-moon.svg" alt="">
+          <img class="image-size" src="/assets/desktop/icon-moon.svg" alt="">
           
            </div>
    
@@ -30,7 +30,7 @@ fetch("./data.json")
        <div class="outter-container" >
            <div class="inner-container-1" style="background-color:${data[i].logoBackground}">
                <!-- <h2>Blogr</h2> -->
-               <img src="${data[i].logo}" class="move-image" alt="Blogr">
+               <img src=".${data[i].logo}" class="move-image" alt="Blogr">
    
            </div>
            <div class="inner-container-2">
@@ -39,7 +39,7 @@ fetch("./data.json")
                  <a class="color" href="#">${data[i].company}</a>
               </div>
            
-               <a href="./index.html" target="_blank"><button class="button " id="b-expand">Company Site</button> </a>
+               <a href="/index.html" target="_blank"><button class="button " id="b-expand">Company Site</button> </a>
                 
        
     
@@ -64,7 +64,7 @@ fetch("./data.json")
       
                   </div>
                   <div class="apply">
-                      <button class="button apply-1">Apply Now</button>
+                  <a href="/apply/html/applyID_13.html" target="_blank" >  <button class="button apply-1" >Apply Now</button></a>
                   </div>
       
               </div><br>

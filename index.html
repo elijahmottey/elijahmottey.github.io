@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>devjob</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Kumbh+Sans?query=Kumbh+Sans">
     <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,12 +26,12 @@
 
         </div>
         
-        <form action="">
+        <div class="form">
         <!-- <div class="head-search-content"> -->
             
            <div class="search search-flex " ><img  class="image image-1" src="./assets/desktop/icon-search.svg" alt="">
            
-            <input  class="input-rb" type="search" id="myInput" onkeyup="myFunction()" placeholder="Filter by title,companies,expertise..">
+            <input  class="input-rb" type="search" id="myInput"  placeholder="Filter by title,companies,expertise..">
             <img class="image-hidden  filter"src="./assets/mobile/icon-filter.svg" alt="">
           <!-- pop up menu -->
 
@@ -44,10 +44,10 @@
           
           
           </div>
-           <div class="search search-boarder "><img class="image" src="./assets/desktop/icon-location.svg" alt=""><input onkeyup="myFunction()" id="myInput" class="input-rb searchLocation" type="search " placeholder="Filter by location..."></div>
-           <div class="search search-row search-boarder"><input type="checkbox" class="checkbox-blue"><h5 >Full  Time Only</h5><button class="button"  >Search</button></div>
+           <div class="search search-boarder "><img class="image" src="./assets/desktop/icon-location.svg" alt=""><input  id="myInput" class="input-rb searchLocation" type="search " placeholder="Filter by location..."></div>
+           <div class="search search-row search-boarder"><input type="checkbox" class="checkbox-blue"><h5 >Full  Time Only</h5><button class="button" onclick="myFunction()" >Search</button></div>
         <!-- </div> -->
-    </form>
+    </div>
     <div id="menu" class="menu">
                  
       <input type="checkbox" id="checkbox">
@@ -59,7 +59,7 @@
     </header>
     <div class="nav-popup">
       <nav class="popup">
-        <div class="popup-1"><img class="image" src="./assets/desktop/icon-location.svg" alt=""><input  class="input-rb" type="search" id="myInput" onkeyup="myFunction()" placeholder="Filter by Location"></div>
+        <div class="popup-1"><img class="image" src="./assets/desktop/icon-location.svg" alt=""><input  class="input-rb" type="search" id="myInput" placeholder="Filter by Location"></div>
             <hr>
             <div class="popup-2">
               <div><input type="checkbox" id="checkbox"><h4>Full Time Only</h4></div>

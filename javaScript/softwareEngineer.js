@@ -3,7 +3,7 @@ const header=document.querySelector("header");
 const main=document.querySelector("main");
 const footer1=document.querySelector("footer")
 
-fetch("./data.json")
+fetch("../data.json")
 .then(respond=>respond.json())
 .then(data=>{
   for(let i=0;i<data.length;i++){
@@ -17,12 +17,12 @@ fetch("./data.json")
   
     <div class="head-background-content background">
              <div class="head-content ">
-               <img src="./assets/desktop/logo.svg" alt="">
+               <img src="/assets/desktop/logo.svg" alt="">
            </div >
            <div class="head-images">
-          <img class="image-size" src="./assets/desktop/icon-sun.svg" alt="">
+          <img class="image-size" src="/assets/desktop/icon-sun.svg" alt="">
           <div class="head-outter"><div class="head-inner"></div></div>
-          <img class="image-size" src="./assets/desktop/icon-moon.svg" alt="">
+          <img class="image-size" src="/assets/desktop/icon-moon.svg" alt="">
           
            </div>
    
@@ -30,7 +30,7 @@ fetch("./data.json")
        <div class="outter-container" >
            <div class="inner-container-1" style="background-color:${data[i].logoBackground}">
 
-               <img src="${data[i].logo}" class="move-image" alt="Blogr">
+               <img src=".${data[i].logo}" class="move-image" alt="Blogr">
    
            </div>
            <div class="inner-container-2">
@@ -39,7 +39,7 @@ fetch("./data.json")
                  <a class="color" href="apply.html">${data[i].company}</a>
               </div>
            
-               <a href="./index.html" target="_blank"><button class="button " id="b-expand">Company Site</button> </a>
+               <a href="/index.html" target="_blank"><button class="button " id="b-expand">Company Site</button> </a>
                 
        
     
@@ -49,7 +49,7 @@ fetch("./data.json")
  
  `
     
-// main
+        // main
     
         myDiv.innerHTML=`
       
@@ -64,7 +64,7 @@ fetch("./data.json")
       
                   </div>
                   <div class="apply">
-                    <a href="apply.html" target="_blank" class="button apply-1">  <button >Apply Now</button></a>
+                    <a href="/apply/html/applyID_1.html" target="_blank" >  <button class="button apply-1" >Apply Now</button></a>
                   </div>
       
               </div><br>
@@ -104,12 +104,12 @@ fetch("./data.json")
       //  footer
       div.innerHTML=` 
           <div class="footer">
-          <div .footer>
+          <div >
               <h4>${data[i].position}</h4>
               <p class="color">So Digital Inc.</p>
           </div>
           <div class="apply">
-              <button class="button   footer-button">Apply Now</button>
+         <button class="button    footer-button"><a href="/apply/html/applyID_1.html">Apply Now</a></button>
           </div>
         </div>
           
@@ -119,17 +119,17 @@ fetch("./data.json")
       
       
       `
+    
+
+  }
 
 
-      header.append(mydiv);    
-      main.append(myDiv);
-      footer1.append(div);
-      
-
-
-
-
-// select the tag ,class or id
+  header.append(mydiv);    
+  main.append(myDiv);
+  footer1.append(div);
+    
+}
+  // select the tag ,class or id
 
 const toggles=document.querySelector(".head-outter");
 const body=document.querySelector("body");
@@ -183,27 +183,14 @@ const pall=()=>{
     }
 }
 
-apply.addEventListener(
-  "click",()=>{
-    for (let i of apply){
-   
-      console.log("alert")
-     }
-     alert("OOPS \n APPLICATION CLOSED!!")
-   
-  }
-)
 
 
-
-    
-    
- }
 
   }
+    
  
-})
-.catch(error=>console.log(error));
+)
+.catch(error=>console.log("Error"));
 
 
 

@@ -4,7 +4,7 @@
 const myUl=document.querySelector("#myUL");
 
 //fetching data from json file named data.json
-fetch("data.json")
+fetch("/data.json")
 .then(respond=>respond .json())
 .then(data=>{
   for(let i=0;i<12;i++){
@@ -59,7 +59,7 @@ fetch("data.json")
   
       <p class="color">${data[i].postedAt} <span>${data[i].contract}</span></p>
                  <a style="font-weight: bolder;
-                 font-size: 1.2rem;" class="work-des" href="${data[i].website}"> ${data[i].position}</a>
+                 font-size: 1.2rem;" class="work-des" href=".${data[i].website}"> ${data[i].position}</a>
                 <p class="color">${data[i].company}</p><br>
     
                 <span class="country">${data[i].location}</span>
@@ -125,7 +125,7 @@ const darkMode=()=>{
 // from the header tag  the  changeBColor means change Background color of the background
 const toggles=document.querySelector(".head-outter");
 const body=document.querySelector("body");
-const form=document.querySelector("form");
+const form=document.querySelector(".form");
 const search=document.querySelectorAll(".input-rb");
 
 
@@ -182,27 +182,69 @@ popup.addEventListener("click",function(){
 // filter section
 
 function myFunction() {
+  
   // Declare variables
-  var input,input1, filter,filter1 , ul, li, a,b, i,txtValue1, txtValue;
-  input = document.getElementById('myInput');
-  input1 =document.getElementById('myInput');
-  filter = input.value.toUpperCase();
-  filter1 = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName('li');
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.querySelector('.input-rb');
+  location = document.querySelector(".searchLocation")
+  input =input.value;
+  location=location.value
+
+ 
+
+
+  // filter = input.value.toUpperCase();
+  // ul = document.getElementById("myUL");
+  // li = ul.getElementsByTagName('li');
+  myUl.innerHTML = ""
+  fetch("../data.json")
+           .then(respond => respond.json())
+           .then(data => {
+              result = data.filter((entry)=>{
+                    return entry.position == input && entry.location == location                     
+              })
+             
+
+              console.log(`the result is ${result}`)
+              for(let i=0; i<result.length; i++){
+                let card = document.createElement("li")
+                card.innerHTML = `<div class="move-image" 
+                style="background-color:${result[i].logoBackground}; 
+                height: 50px; width: 
+                50px; border-radius: 15px;
+                 display:flex; justify-content: 
+                 center; align-items: center">
+                <img src=".${result[i].logo}" />
+              </div>  
+            
+                <p class="color">${result[i].postedAt} <span>${result[i].contract}</span></p>
+                           <a style="font-weight: bolder;
+                           font-size: 1.2rem;" class="work-des" href="${result[i].website}"> ${result[i].position}</a>
+                          <p class="color">${result[i].company}</p><br>
+              
+                          <span class="country">${result[i].location}</span>`
+                myUl.append(card)
+                alert("Hiioooooooi")
+            }
+           })
+           .catch(error=>{
+            console.log(error)
+           })
+           
+
+
 
   // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    b = li[i].getElementsByTagName("p")[0];
-    txtValue1 = b.textContent || b.innerText;
-    if ((txtValue.toUpperCase().indexOf(filter) > -1) || (txtValue1.toUpperCase().indexOf(filter1) > -1) ){
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
+  // for (i = 0; i < li.length; i++) {
+  //   a = li[i].getElementsByTagName("a")[0];
+  //   txtValue = a.textContent || a.innerText;
+  
+  //   if ((txtValue.toUpperCase().indexOf(filter) > -1)){
+  //     li[i].style.display = "";
+  //   } else {
+  //     li[i].style.display = "none";
+  //   }
+  // }
 }
 
 
