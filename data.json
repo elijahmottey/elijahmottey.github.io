@@ -39,7 +39,7 @@
     "postedAt": "20h ago",
     "contract": "Part Time",
     "location": "United States",
-    "website": "./job/pureScriptDev.html",
+    "website": "/job/pureScriptDev.html",
     "apply": "https://example.com/blogr/apply",
     "description": "Blogr is looking for a part-time developer to join our six-strong team of full-stack engineers. Our core development values are strong, static typing and correctness, rigorous automation (in both testing and infrastructure) and everyone having a say.",
     "requirements": {
@@ -70,7 +70,7 @@
     "postedAt": "1d ago",
     "contract": "Part Time",
     "location": "Russia",
-    "website": "./job/backendEngineer.html",
+    "website": "/job/backendEngineer.html",
     "apply": "https://example.com/vector/apply",
     "description": "We are looking for a Mid-level Back End Engineer to join our growing software engineering organization. The right person will help move our platform to the next level. You’ll be working as part of a skilled, collaborative team to jointly design and implement high visibility applications.",
     "requirements": {
@@ -100,7 +100,7 @@
     "postedAt": "2d ago",
     "contract": "Full Time",
     "location": "Japan",
-    "website": "./job/application-dev.html",
+    "website": "/job/application-dev.html",
     "apply": "https://example.com/officelite/apply",
     "description": "Office Lite is seeking a talented and enthusiastic Senior Application Engineer whose primary responsibility is software architecture and development for Office Lite systems. Additional responsibilities include participation in project time/task estimation, code and architecture reviews, providing support for junior developers, documentation of system architecture and a supporting role for all phases of the development life-cycle (project definition, process mapping, architecture, coding, acceptance testing, installation, turnover to support, etc.).",
     "requirements": {
@@ -132,7 +132,7 @@
     "postedAt": "2d ago",
     "contract": "Part Time",
     "location": "Japan",
-    "website": "./job/remoteDev.html",
+    "website": "/job/remoteDev.html",
     "apply": "https://example.com/pod/apply",
     "description": "Join our dynamic team in developing Pod’s core products and supporting infrastructure. Our software is currently written in Java, VB.Net, React Native, React JS and others. You will help lead new initiatives to build and improve the testing, staging and deployment solutions. You will interact with all development teams, development leadership and our hosting/IT staff to define requirements and goals for the Dev Ops Platform.",
     "requirements": {
@@ -168,7 +168,7 @@
     "postedAt": "4d ago",
     "contract": "Part Time",
     "location": "Germany",
-    "website": "./job/DesktopSupport.html",
+    "website": "/job/DesktopSupport.html",
     "apply": "https://example.com/creative/apply",
     "description": "Creative is seeking a Desktop Support Manager responsible for managing and leading a high-performance team in a dynamic environment. The ideal candidate should have management experience, a strong technical skillset, exceptional client service skills and enjoy mentoring a team.",
     "requirements": {
@@ -202,7 +202,7 @@
     "postedAt": "1w ago",
     "contract": "Full Time",
     "location": "United States",
-    "website": "./job/ios-engineer.html",
+    "website": "/job/ios-engineer.html",
     "apply": "https://example.com/pomodoro/apply",
     "description": "We are looking for thoughtful, well-rounded iOS engineer to join our team. We’re looking for someone to help build out the foundation of the app and infrastructure. If you are interested in taking part in building an application that millions of people use every day to increase their productivity, this is the perfect opportunity. You will play an important part in our mobile engineering practice, implementing new features, improving performance, and building beautiful user interfaces.",
     "requirements": {
@@ -233,7 +233,7 @@
     "postedAt": "1w ago",
     "contract": "Full Time",
     "location": "United Kingdom",
-    "website": "./job/EJBDev.html",
+    "website": "/job/EJBDev.html",
     "apply": "https://example.com/maker/apply",
     "description": "We are seeking an experienced EJB Developer who will join our fast-growing engineering team, working on mission-critical applications. Searching for a Senior Java Developer who thrives on working with enterprises in multiple industries with unique business challenges requiring sophisticated solution design.",
     "requirements": {
@@ -264,7 +264,7 @@
     "postedAt": "1w ago",
     "contract": "Part Time",
     "location": "Singapore",
-    "website": "./job/frontendDev.html",
+    "website": "/job/frontendDev.html",
     "apply": "https://example.com/coffeeroasters/apply",
     "description": "We’re looking for an experienced Frontend Developer with an eye for Product Design along with a honed set of coding skills and who shares our values around technology. Most importantly, we’d like someone who is collaborative and can work closely with the rest of our team shaping product.",
     "requirements": {
@@ -295,7 +295,7 @@
     "postedAt": "2w ago",
     "contract": "Freelance",
     "location": "United States",
-    "website": "./job/app-web-dev.html",
+    "website": "/job/app-web-dev.html",
     "apply": "https://example.com/mastercraft/apply",
     "description": "Mastercraft is looking for a UX/UI Designer to turn our software into easy-to-use products for our clients. Responsibilities include gathering user requirements, designing graphic elements and building software component",
     "requirements": {
@@ -328,7 +328,7 @@
     "postedAt": "1mo ago",
     "contract": "Part Time",
     "location": "New Zealand",
-    "website": "./job/fullStackDev.html ",
+    "website": "/job/fullStackDev.html ",
     "apply": "https://example.com/crowdfund/apply",
     "description": "Crowdfund is currently expanding and working on revolutionizing the world of raising funds for any project – creative, entrepreneurial or cause-related. Come and join us in this growth! We are looking for an exceptionally talented Fullstack Developer who will become an integral part of the company’s exciting new chapter.",
     "requirements": {
@@ -355,7 +355,7 @@
   {
     "id": 12,
     "company": "Typemaster",
-    "logo": "./assets/logos/typemaster.svg",
+    "logo": "/assets/logos/typemaster.svg",
     "logoBackground": "hsl(22, 89%, 52%)",
     "position": "Technical Lead Engineer",
     "postedAt": "1mo ago",
@@ -387,13 +387,13 @@
   {
     "id": 13,
     "company": "Crowdfund",
-    "logo": "./assets/logos/crowdfund.svg",
+    "logo": "/assets/logos/crowdfund.svg",
     "logoBackground": "hsl(157, 57%, 50%)",
     "position": "Front-end Developer",
     "postedAt": "1mo ago",
     "contract": "Full Time",
     "location": "New Zealand",
-    "website": "./job/Front-end Developer.html",
+    "website": "/job/Front-end Developer.html",
     "apply": "https://example.com/crowdfund/apply",
     "description": "We’re hiring a Front-end Developer to help create the front-end experience for Crowdfund’s management interface. As our ideal candidate, you’re an adept user of the front-end stack (React, Yarn, webpack, Babel, SCSS, JSX, GraphQL) and an avid learner of new frameworks. You enjoy building excellent user experiences as well as reusable components that other developers can use to solve similar problems. You love open-source and being part of a thriving developer community and understand that strong businesses enable great enduring communities.",
     "requirements": {
@@ -425,7 +425,7 @@
     "postedAt": "1mo ago",
     "contract": "Full Time",
     "location": "Singapore",
-    "website": "./job/JuniorFull-StackDeveloper.html",
+    "website": "/job/JuniorFull-StackDeveloper.html",
     "apply": "https://example.com/coffeeroasters/apply",
     "description": "We’re looking for a Junior Full-Stack Developer to join our Product and Engineering team. This is an exciting opportunity to work on building our core web application.",
     "requirements": {
@@ -457,7 +457,7 @@
     "postedAt": "1mo ago",
     "contract": "Full Time",
     "location": "United States",
-    "website": "./job/MidweightFront-endDeveloper.html",
+    "website": "/job/MidweightFront-endDeveloper.html",
     "apply": "https://example.com/blogr/apply",
     "description": "We’re looking for a Frontend Developer who values user experience, performance and accessibility. Through our enduring interest in how people use our products, Blogr embraces a model of software development that is iterative and gradual. Like high-performance engines, our products are built through a process of continuous refinement (usually on two week release cycles). We’re looking for someone who is comfortable embodying this approach.",
     "requirements": {

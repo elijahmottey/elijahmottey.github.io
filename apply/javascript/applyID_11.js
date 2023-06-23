@@ -42,6 +42,8 @@ fetch("/data.json")
 
       for(let i=0;i<data.length;i++){
 
+        if ( data[i].id===11){
+
       myDiv2.innerHTML=`
               
        
@@ -98,7 +100,7 @@ fetch("/data.json")
       `
       }
       myMain.append(myDiv2)
-
+    }
         }
 
         // darkmode
