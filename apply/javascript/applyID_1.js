@@ -41,7 +41,7 @@ fetch("/data.json")
       myHeader.append(myDiv1)
 
       for(let i=0;i<data.length;i++){
-
+        if(data[i].id===1){
       myDiv2.innerHTML=`
               
        
@@ -99,7 +99,7 @@ fetch("/data.json")
       }
       myMain.append(myDiv2)
 
-        }
+        }}
 
         // darkmode
 

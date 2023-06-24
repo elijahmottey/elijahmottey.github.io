@@ -17,7 +17,7 @@ fetch("../data.json")
   
     <div class="head-background-content background">
              <div class="head-content ">
-               <img src="./assets/desktop/logo.svg" alt="">
+               <img src="/assets/desktop/logo.svg" alt="">
            </div >
            <div class="head-images">
           <img class="image-size" src="/assets/desktop/icon-sun.svg" alt="">

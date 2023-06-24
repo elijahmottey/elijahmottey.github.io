@@ -30,7 +30,7 @@ fetch("../data.json")
        <div class="outter-container" >
            <div class="inner-container-1" style="background-color:${data[i].logoBackground}">
                <!-- <h2>Blogr</h2> -->
-               <img src=".${data[i].logo}" class="move-image" alt="Blogr">
+               <img src="${data[i].logo}" class="move-image" alt="Blogr">
    
            </div>
            <div class="inner-container-2">

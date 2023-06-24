@@ -4,8 +4,8 @@
 const myUl=document.querySelector("#myUL");
 
 //fetching data from json file named data.json
-fetch("/data.json")
-.then(respond=>respond .json())
+fetch("./data.json")
+.then(respond=>respond.json())
 .then(data=>{
   for(let i=0;i<12;i++){
     //creating an li to contain the items
@@ -26,7 +26,7 @@ fetch("/data.json")
 
     <p class="color">${data[i].postedAt} <span>${data[i].contract}</span></p>
                <a style="font-weight: bolder;
-               font-size: 1.2rem;" class="work-des" href="${data[i].website}"> ${data[i].position}</a>
+               font-size: 1.2rem;" class="work-des" href=".${data[i].website}"> ${data[i].position}</a>
               <p class="color">${data[i].company}</p><br>
   
               <span class="country">${data[i].location}</span>
@@ -36,6 +36,8 @@ fetch("/data.json")
      
 
   }
+
+  //------------------------------------------load button--------------------------
   const load=document.querySelector(".button-load-more")
 
   load.addEventListener("click",()=>{
@@ -71,20 +73,21 @@ fetch("/data.json")
         
     
     }
-      load.style.display="none"
+      load.style.display="none";
+      
+      
     
   }
 })
 
 
+// --------------------dark mode-------------------------------
 
-
-const toggles=document.querySelector(".head-outter");
+const toggle1=document.querySelector(".head-outter");
   const li_2=document.querySelectorAll("li");
    const changeH2=document.querySelectorAll(".work-des");
 const darkMode=()=>{
-   toggles.addEventListener("click",function(){
-   toggles.classList.toggle("active");
+   toggle1.addEventListener("click",function(){
     changeH2Color();
     liall();
 
@@ -107,13 +110,13 @@ const darkMode=()=>{
        darkMode()
     }
 )
-.catch(error=>console.log(error))
+.catch(error=>console.log(`Error ${error}`))
 
 
 
 
 
-//------------------------------------------load button--------------------------
+
 
 
 
@@ -184,28 +187,69 @@ popup.addEventListener("click",function(){
 function myFunction() {
   
   // Declare variables
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.querySelector('.input-rb');
-  location = document.querySelector(".searchLocation")
-  input =input.value;
-  location=location.value
-
  
 
+  const search_constraint = document.querySelectorAll("#myInput")
+  const search_title = search_constraint[0].value
+  const search_location = search_constraint[1].value
+  const search_contract = document.querySelector("[type=checkbox]").checked
 
-  // filter = input.value.toUpperCase();
-  // ul = document.getElementById("myUL");
-  // li = ul.getElementsByTagName('li');
+  
+ 
   myUl.innerHTML = ""
-  fetch("../data.json")
+  fetch("./data.json")
            .then(respond => respond.json())
            .then(data => {
-              result = data.filter((entry)=>{
-                    return entry.position == input && entry.location == location                     
-              })
+              if(search_title && !search_location && !search_contract){  // search only by title
+                result = data.filter((entry)=>{
+                  return search_title == entry.position  && entry.contract == "Part Time"                
+            })
+              } else if (!search_title && search_location && !search_contract){ // search only by location
+                result = data.filter((entry)=>{
+                  return  search_location == entry.location  && entry.contract == "Part Time"                 
+            })
+              }else if (!search_title && !search_location){ // search by contract
+                if(search_contract){
+                  result = data.filter((entry)=>{
+                   return entry.contract == "Full Time"
+               }              
+           )
+             }  else {
+               result = data.filter((entry)=>{
+                 return entry.contract == "Part Time"
+             }              
+         )
+             }
+           }
+               else if (search_title && search_location && !search_contract){ // search by both location and title
+                result = data.filter((entry)=>{
+                  return search_title == entry.position  && search_location == entry.location && search_contract == "Part Time"                 
+            })
+            
+              } else if (search_title && search_contract && !search_location){ // search by title and contract
+                result = data.filter((entry)=>{
+                   return search_title == entry.position &&  entry.contract == "Full Time"
+                })
+
+              }
+              else if (!search_title && search_contract && search_location){ // search by location and contract
+                result = data.filter((entry)=>{
+                   return search_location == entry.location && entry.contract == "Full Time"
+                })
+
+              } else if (search_title && search_contract && search_location){
+                result = data.filter((entry)=>{
+                  return search_title == entry.position && search_location == entry.location &&
+                  entry.contract == "Full Time"
+                })
+              }
+
+              else {  // when there is nothing to search
+                result = data
+              }
              
 
-              console.log(`the result is ${result}`)
+              // console.log(`the result is ${result}`)
               for(let i=0; i<result.length; i++){
                 let card = document.createElement("li")
                 card.innerHTML = `<div class="move-image" 
@@ -224,7 +268,6 @@ function myFunction() {
               
                           <span class="country">${result[i].location}</span>`
                 myUl.append(card)
-                alert("Hiioooooooi")
             }
            })
            .catch(error=>{
@@ -234,18 +277,8 @@ function myFunction() {
 
 
 
-  // Loop through all list items, and hide those who don't match the search query
-  // for (i = 0; i < li.length; i++) {
-  //   a = li[i].getElementsByTagName("a")[0];
-  //   txtValue = a.textContent || a.innerText;
-  
-  //   if ((txtValue.toUpperCase().indexOf(filter) > -1)){
-  //     li[i].style.display = "";
-  //   } else {
-  //     li[i].style.display = "none";
-  //   }
-  // }
 }
+
 
 
 

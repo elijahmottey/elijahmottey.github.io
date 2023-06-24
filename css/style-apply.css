@@ -253,11 +253,18 @@ form{
  body.active {
     background-color: var(--midnight);
  }
- form.active,.outter-container.active{
+ form.active{
     background-color: var(--veryDarkBlue);
     color:var(--white)
  }
+ .outter-container.active{
+    background-color: var(--veryDarkBlue);
+    color:var(--white)
+ }
+
  .text.active{
     border:none;
     outline:none;
  }
+
+

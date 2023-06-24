@@ -104,7 +104,7 @@ fetch("../data.json")
       //  footer
       div.innerHTML=` 
           <div class="footer">
-          <div .footer>
+          <div >
               <h4>${data[i].position}</h4>
               <p class="color">So Digital Inc.</p>
           </div>

@@ -45,7 +45,7 @@ fetch("/data.json")
       myDiv2.innerHTML=`
               
        
-      <form action="">
+      <form action="" class="form">
 
       <label for="text" >First Name</label>
       <input type="text" required class="text">
@@ -98,35 +98,11 @@ fetch("/data.json")
       `
       }
       myMain.append(myDiv2)
+       
+        }}  
+       
 
-        }}
-
-        // darkmode
-
-        const toggles1=document.querySelector(".head-outter");
-        const body=document.querySelector("body");
-        const form=document.querySelector("form");
-        const outterContainer=document.querySelector(".outter-container");
-        const text=document.querySelectorAll(".text")
-
-
-
-      //   // change to dark blue when clicked on 
-      // toggles1.addEventListener("click",()=>{
-      //   toggles1.classList.toggle("active");
-      //   body.classList.toggle("active");
-      //   form.classList.toggle("active");
-      //   outterContainer.classList.toggle("active")
-      //   textall();
-      
-      // })
-
-      const textall=()=>{
-        for(let i of text){
-          i.classList.toggle("active");
-        }
-      }
-
+       
 
 
 
@@ -134,3 +110,28 @@ fetch("/data.json")
     }
 })
 .catch(error=>console.log(error))
+
+
+ // darkmode
+
+
+const toggles = document.querySelector(".head-outter");
+const body = document.querySelector("body");
+const form = document.querySelector("form");
+const outterContainer = document.querySelector(".outter-container");
+const text = document.querySelectorAll(".text");
+
+// change to dark blue when clicked on
+toggles.addEventListener("click", () => {
+  body.classList.toggle("active");
+  form.classList.toggle("active");
+  outterContainer.classList.toggle("active");
+  textall();
+});
+
+const textall = () => {
+  for (let i of text) {
+    i.classList.toggle("active1");
+  }
+};
+
