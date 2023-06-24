@@ -40,10 +40,7 @@ body{
     
     
 }
-.image-size{
-    width:20px;
-    height: 20px;
-}
+
 .head-search-content{
     position: relative;
     top:0;
@@ -69,31 +66,7 @@ body{
     cursor: pointer;  
     
 }
-.head-outter{
-    position:relative;
-    top:0;
-    right:0;
-    width:40px;
-    height: 20px;
-    border-radius: 60px;
-    background-color: var(--white);
-    margin: 0 10px;
-}
-.head-inner{
-     position:absolute; 
-    top:0;
-    left: 0; 
-    width:12px;
-    height: 12px;
-    border-radius:50%;
-    background-color:var(--voilet) ;
-    margin-top: 4.4px;
-    margin-left: 5px;
-    
-}
-.head-outter:hover .head-inner{
-    background-color: var(--lightVoilet);
-}
+
 a{
     text-decoration: none;
     color: var(--white);
@@ -121,7 +94,8 @@ a{
     align-items: center;
     margin:0 auto;
     width: 70%;
-    background-color:var(--white) ;
+    background-color:var(--veryDarkBlue) ;
+    color: var(--white);
     height: 4em;
     margin-top: -32px;
     border-radius: 30px;
@@ -141,10 +115,12 @@ main{
     background-image:url("/assets/apply/apply-image.jpg");
     background-repeat:no-repeat;
     background-size: cover;
-    height:50vh;
+    background-position: center;
+    height:100%;
     width:100vw;
     margin:0 auto;
-    aspect-ratio: 31/14;
+    ;
+    aspect-ratio: 16/9;
     
 }
 
@@ -164,10 +140,11 @@ form{
     padding:2rem;
     width:50%;
     height: 100%;
-    margin-top: 0;
-    background-color: var(--white);
+    margin-top: 6rem;
+    background-color: var(--veryDarkBlue);
     display: block;
     margin-bottom: 3em;
+    color:var(--white)
 
 
 }
@@ -236,7 +213,7 @@ form{
     .back{
         margin-top: 2.4em;
         position: absolute;
-        top:11em;
+        top:10em;
         left:center;
     }
 

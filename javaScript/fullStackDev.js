@@ -109,7 +109,7 @@ fetch("../data.json")
               <p class="color">So Digital Inc.</p>
           </div>
           <div class="apply">
-              <button class="button   footer-button">Apply Now</button>
+          <button class="button    footer-button"><a href="/apply/html/applyID_11.html">Apply Now</a></button>
           </div>
         </div>
           

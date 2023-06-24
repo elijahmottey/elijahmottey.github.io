@@ -14,11 +14,7 @@ fetch("/data.json")
             <div class="head-content ">
               <img src="/assets/desktop/logo.svg" alt="">
           </div >
-          <div class="head-images">
-         <img class="image-size" src="/assets/desktop/icon-sun.svg" alt="">
-         <div class="head-outter"><div class="head-inner"></div></div>
-         <img class="image-size" src="/assets/desktop/icon-moon.svg" alt="">
-         
+       
           </div>
   
       </div>
@@ -112,26 +108,4 @@ fetch("/data.json")
 .catch(error=>console.log(error))
 
 
- // darkmode
-
-
-const toggles = document.querySelector(".head-outter");
-const body = document.querySelector("body");
-const form = document.querySelector("form");
-const outterContainer = document.querySelector(".outter-container");
-const text = document.querySelectorAll(".text");
-
-// change to dark blue when clicked on
-toggles.addEventListener("click", () => {
-  body.classList.toggle("active");
-  form.classList.toggle("active");
-  outterContainer.classList.toggle("active");
-  textall();
-});
-
-const textall = () => {
-  for (let i of text) {
-    i.classList.toggle("active1");
-  }
-};
 
