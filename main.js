@@ -76,8 +76,13 @@ fetch("./data.json")
       load.style.display="none";
       
       
+      
     
   }
+  
+// --------------------dark mode-------------------------------
+
+    
 })
 
 
@@ -93,7 +98,7 @@ const darkMode=()=>{
 
    })
 
-   //looping through all fieldset  to apply dark background effect
+   //looping through all li  to apply dark background effect
     function liall(){
       for(let a of li_2){
         a.classList.toggle("active");
@@ -172,7 +177,7 @@ function searchBorderall(){
 // popup
 
 popup.addEventListener("click",function(){
-  // menupopup.style.color="yellow"
+  
    menuPopup.classList.toggle("active")
   
 })
@@ -269,6 +274,36 @@ function myFunction() {
                           <span class="country">${result[i].location}</span>`
                 myUl.append(card)
             }
+                    
+            
+// --------------------dark mode-------------------------------
+
+const toggle1=document.querySelector(".head-outter");
+const li_2=document.querySelectorAll("li");
+ const changeH2=document.querySelectorAll(".work-des");
+const darkMode=()=>{
+ toggle1.addEventListener("click",function(){
+  changeH2Color();
+  liall();
+
+ })
+
+ //looping through all fieldset  to apply dark background effect
+  function liall(){
+    for(let a of li_2){
+      a.classList.toggle("active");
+    }
+  }
+
+        //looping through all H2 to apply dark background effect
+  function changeH2Color(){
+    for(let b of changeH2){
+     b.classList.toggle("active")
+    }
+  }
+}
+     darkMode()
+
            })
            .catch(error=>{
             console.log(error)
