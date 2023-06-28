@@ -7,14 +7,13 @@
     margin: 0px;
     font-family: 'Kumbh Sans', sans-serif;
     padding:0px;
-    overflow:none;
-    
-    
+    overflow:none;   
 } 
+
 html{
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth;   
 }
+
 :root{
     --voilet:#5964E0;
     --white:rgba(255,255,255);
@@ -46,7 +45,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     height: 120px;
-    margin-trim: 0;
+    
 }
 .head-background-content{
     display: flex;
@@ -317,7 +316,7 @@ a{
 
 @media (max-width: 1023px) {
     /*  tablet-specific CSS styles here */
-      form{
+      .form{
     width:90%;
 
    }
